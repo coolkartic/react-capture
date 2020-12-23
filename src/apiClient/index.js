@@ -12,7 +12,7 @@ export const apiClient = axios.create({
   timeout: 20000,
   headers: {
     "Content-Type": "application/json",
-    "Authorization": "EMIS_web@2019_api",
+    // "Authorization": "EMIS_web@2019_api",
     common: {
       Authorization: getCookie("session_token"),
     },

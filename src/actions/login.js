@@ -7,13 +7,13 @@ import history from "../history";
 
  function _userLogin(data, redirect = false) {
     console.log(data, '-----');
-    let datas = {"records":{"emis_username":"state","emis_password":"spdssa2018"}}
+    // let datas = {"records":{"emis_username":"state","emis_password":"spdssa2018"}}
+    let datas = {data}
     return apiClient
       .post(endpoints().userLogin, datas)
       .then(response => {
         console.log(response, 'upload success');
         alert("SUCC");
-        history.push("/Home");
       })
       .catch(error => {
         console.log(error, 'error');
